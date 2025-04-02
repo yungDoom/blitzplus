@@ -254,9 +254,7 @@ const char *openLibs( bool debug ){
 	if( !gl ) return "Error in linker.dll";
 	linkerLib=gl();
 
-	string rt = home + "\\bin\\runtime";
-	if (debug) rt += "_dbg.dll";
-	else rt += ".dll";
+	string rt = home + "\\bin\\runtime.dll";
 
 	runtimeHMOD=LoadLibrary( rt.c_str() );
 	if( !runtimeHMOD ) return "Unable to open runtime.dll";
